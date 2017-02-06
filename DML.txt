@@ -1,0 +1,33 @@
+﻿Data Manipulation Language(DML) ifadələri datanı bazada idarə etmək üçün istifadə olunur. Əsas DML commandları Insert,
+Update, Delete-dir.
+
+1)Insert bazadakı table-yə data əlavə etmək üçün istifadə olunan əmrdir. Insert vasitəsilə data bu cür əlavə olunur:
+Insert into table_name values(data_1,data_2,...,data_n);
+
+Bundan əlavə Insert əmri vasitəsilə table-də yalnız istədiyimiz sahələri də doldura bilərik. Məsələn:
+Insert into table_name(id,name,) values(data_1,data_2);
+Lazım gəldikdə valuelərdən hər hansı birinə və ya bir neçəsinə NULL və ya default da yazmaq olar. 
+
+2) Update vasitəsilə bazadakı məlumatları redaktə etmək, yeniləmək olar.
+Update table_name set column_name=value where condition;
+
+Məsələn:
+update university set faculty="ITIF" where faculty = "IPAF";
+
+Eyni zamanda bir neçə sütunu da update etmək mümkündür.
+update universities set name="ADNSU",faculty="ITIF" where name="ADNA";
+
+3) Delete əmri vasitəsilə bazadan məlumat(lar) silmək mümkündür.
+DELETE from table_name;
+
+DELETE from Student where id=123;
+
+Bu əmr 123-cü id-dəki bütün məlumatları siləcək. Bazadakı bütün məlumatları silmək üçün
+
+DELETE from student; əmrindən istifadə oluna bilər.
+
+Select əmri isə bazadakı dataları seçib göstərmək üçün istifadə olunur.
+Məsələn, SELECT faculty_names FROM university;
+
+Table-dəki bütün məlumatları göstərmək üçün
+SELECT * FROM university istifadə oluna bilər 
